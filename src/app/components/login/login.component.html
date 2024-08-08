@@ -1,0 +1,40 @@
+
+
+<div class="space"></div>
+
+<div class="container ">
+    <div class="alert top alert-danger w-100 text-center">Register</div>
+
+    <form >
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" ngModel name="email" #email="ngModel" required email="true"  >
+          <div class="alert alert-danger" *ngIf="email.invalid &&  email.touched">Enter your email</div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">First Name</label>
+          <input type="text" class="form-control" ngModel name="first_name" #first_name="ngModel" required  minlength="3" maxlength="8" >
+          <div class="alert alert-danger" *ngIf="first_name.invalid &&  first_name.touched">Enter your First name</div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Last Name</label>
+            <input type="text" class="form-control " ngModel name="last_name" #last_name="ngModel"  required  minlength="3" maxlength="8" >
+            <div class="alert alert-danger" *ngIf="last_name.invalid && last_name.touched">Enter your First name</div>
+
+          </div>
+
+          <br>
+     
+        <button type="submit" class="btn btn-success w-100">Submit</button>
+      </form>
+
+
+</div>
+
+
+
+
+
+
